@@ -3,7 +3,7 @@ import React from 'react'
 export default function catchAllSegments({params}:
     {params:{slug:string[]}}) {
 
-        if(params.slug.length==3){
+        if(params.slug?.length==3){
             return (
                 <div>
                  Returning Document {params.slug[0]} , <br />
@@ -12,7 +12,7 @@ export default function catchAllSegments({params}:
                 </div>
               )
         }
-        else if(params.slug.length==2){
+        else if(params.slug?.length==2){
             return (
                 <div>
                  Returning Document {params.slug[0]} , <br />
@@ -20,7 +20,7 @@ export default function catchAllSegments({params}:
                 </div>
               )
         }
-        else if(params.slug.length==1){
+        else if(params.slug?.length==1){
             return (
                 <div>
                  Returning Document {params.slug[0]} , <br />
